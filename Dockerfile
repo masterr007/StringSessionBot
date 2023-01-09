@@ -1,12 +1,22 @@
-FROM python:3.10-slim-buster
+# Python Based Docker
+FROM python:latest
 
+# Installing Packages
 RUN apt update && apt upgrade -y
-RUN apt install git -y
+RUN apt install git curl python3-pip ffmpeg -y
+
+# Updating Pip Packages
+RUN pip install -U pip
+
+# Copying Requirements
 COPY requirements.txt /requirements.txt
 
+# Installing Requirements
 RUN cd /
-RUN pip install -r requirements.txt
+RUN pip3 install -U -r requirements.txt
 RUN mkdir /StringSessionBot
 WORKDIR /StringSessionBot
 COPY start.sh /start.sh
+
+# Running StringSessionBot
 CMD ["/bin/bash", "/start.sh"]
