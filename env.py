@@ -3,10 +3,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_ID = os.getenv("API_ID", "11159699").strip()
-API_HASH = os.getenv("API_HASH", "b432bad423ae90d470d906ef26109712").strip()
-BOT_TOKEN = os.getenv("BOT_TOKEN", "5622690128:AAEHTxXmpvmxyVdgKYYBAc46SwCYBoKPkts").strip()
-DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://mdisk:mdisk@cluster0.0ycuxow.mongodb.net/?retryWrites=true&w=majority").strip()
+API_ID = os.getenv("API_ID", "").strip()
+API_HASH = os.getenv("API_HASH", "").strip()
+BOT_TOKEN = os.getenv("BOT_TOKEN", "").strip()
+DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
 MUST_JOIN = os.getenv("MUST_JOIN", "")
 
 if not API_ID:
