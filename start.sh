@@ -7,6 +7,6 @@ else
   git clone $SOURCE_CODE /StringSessionBot
 fi
 cd /StringSessionBot
-pip3 install -U -r requirements.txt
+pip install -U -r requirements.txt
 echo "Starting Bot...."
 python3 bot.py
